@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd /home/ubuntu
-npm start
+sudo cp -r /home/ubuntu/build /var/www/html/reactapp
