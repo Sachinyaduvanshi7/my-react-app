@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd /home/ubuntu
-npm run build
+npm -f install

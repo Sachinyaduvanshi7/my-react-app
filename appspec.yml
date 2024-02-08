@@ -4,9 +4,12 @@ files:
   - source: /
     destination: /home/ubuntu
 hooks:
+  Install:
+    - location: install.sh
+      timeout: 300
   AfterInstall:
     - location: afterinstall.sh
-      timeout: 400
+      timeout: 300
   ApplicationStart:
     - location: applicationstart.sh
       timeout: 100
