@@ -12,6 +12,7 @@ phases:
       - echo "Packages have been installed"
       - npm run build
       - echo "Storing Build Artifact to the Location"
+      - /var/www/html
 artifacts:
   paths:
     - '*'
