@@ -16,4 +16,4 @@ phases:
   post_build:
     commands:
       - echo "Copying artifacts to S3..."
-      - aws s3 cp build/ s3://raoshab --recursive
+      - aws s3 cp build/ s3://raoshab/app.zip --recursive
