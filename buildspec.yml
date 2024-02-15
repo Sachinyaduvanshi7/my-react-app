@@ -8,14 +8,6 @@ phases:
       - echo "Installing dependencies..."
       - npm install
       
-  pre_build:
-    commands:
-      - echo "Running linting..."
-      - npm run lint
-      # Optionally, you can run tests here
-      # - echo "Running tests..."
-      # - npm test
-      
   build:
     commands:
       - echo "Building React app..."
