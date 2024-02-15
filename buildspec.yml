@@ -13,6 +13,5 @@ phases:
       - npm run build
       - echo "Storing Build Artifact to the Location"
 artifacts:
-  type: zip
   paths:
     - '*'
