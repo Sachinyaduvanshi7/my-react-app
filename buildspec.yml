@@ -7,7 +7,8 @@ phases:
   build:
     commands:
       - echo "Package & Dependicies are getting installed"
-      - npm -f install
+      - #npm -f install
+      - npm i
       - echo "Packages have been installed"
       - npm run build
       - echo "Storing Build Artifact to the Location"
