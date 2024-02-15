@@ -1,18 +1,27 @@
 version: 0.2
 
 phases:
-  install: 
+  install:
     runtime-versions:
-      nodejs: 18
+      nodejs: 14
+    commands:
+      - echo "Installing dependencies..."
+      - npm install
+      
+  pre_build:
+    commands:
+      - echo "Running linting..."
+      - npm run lint
+      # Optionally, you can run tests here
+      # - echo "Running tests..."
+      # - npm test
+      
   build:
     commands:
-      - echo "Package & Dependicies are getting installed"
-      - #npm -f install
-      - npm i
-      - echo "Packages have been installed"
+      - echo "Building React app..."
       - npm run build
-      - echo "Storing Build Artifact to the Location"
-      - /var/www/html
-artifacts:
-  paths:
-    - '*'
+      
+  post_build:
+    commands:
+      - echo "Copying artifacts to S3..."
+      - aws s3 cp build/ s3://raoshab --recursive
