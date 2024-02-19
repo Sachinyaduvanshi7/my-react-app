@@ -17,6 +17,6 @@ phases:
     commands:
       - echo "Creating ZIP archive..."
      # - cd build                # Change to the build directory
-      #- zip -r app.zip ./*      # Create a ZIP file from all files in the build directory
+      - zip -r app.zip ./*      # Create a ZIP file from all files in the build directory
       #- echo "Copying artifacts to S3..."
       - aws s3 cp app.zip s3://raoshab/app.zip    # Upload the ZIP file to S3
