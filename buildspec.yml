@@ -1,22 +1,12 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      nodejs: 18
-    commands:
-      - echo "Installing dependencies..."
-      - npm install
-      
   build:
     commands:
-      - echo "Building React app..."
       - npm run build
-      
-  post_build:
-    commands:
-      - echo "Creating ZIP archive..."
-      #- cd build                # Change to the build directory
-      - zip -r app.zip ./*      # Create a ZIP file from all files in the build directory
-      - echo "Copying artifacts to S3..."
-      - aws s3 cp app.zip s3://raoshab/app.zip    # Upload the ZIP file to S3
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build
+  discard-paths: no
