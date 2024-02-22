@@ -10,7 +10,7 @@ phases:
       - npm install
   build:
     commands:
-      - echo Build started on `date`
+      - echo Build stated on `date`
       - echo Compiling
       - npm run build
   post_build:
