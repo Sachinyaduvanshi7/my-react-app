@@ -6,7 +6,7 @@ phases:
       nodejs: 14
   pre_build:
     commands:
-      #installs dependencieees into the node_modules/ directory
+      #installs dependenciees into the node_modules/ directory
       - npm install
   build:
     commands:
