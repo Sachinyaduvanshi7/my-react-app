@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          This is my first react app using codepipeline test-3 final-4.
+          This is my first react app using codepipeline test-3 final-5.
         </p>
         <a
           className="App-link"
