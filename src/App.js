@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          This is my first react app using codepipeline using jenkins test-1-from-dev-sachin.
+          This is my first react app using codepipeline using jenkins test-1-from-dev-sachin-2.
         </p>
         <a
           className="App-link"
